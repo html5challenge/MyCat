@@ -3,13 +3,13 @@ function Circle(){
     this.setCircleType = function(type){
         this._circleType = type;
         switch (type){
-            case 1:
+            case Circle.TYPE_UNSELECTED:
                 this.setColor("#cccccc");
                 break;
-            case 2:
+            case Circle.TYPE_SELECTED:
                 this.setColor("#ff6600");
                 break;
-            case 3:
+            case Circle.TYPE_CAT:
                 this.setColor("#0000ff");
                 break;
         }
@@ -25,3 +25,6 @@ function Circle(){
     this.setCircleType(1);
 }
 Circle.prototype = new createjs.Shape();
+Circle.TYPE_UNSELECTED = 1;
+Circle.TYPE_SELECTED = 2;
+Circle.TYPE_CAT = 3;
